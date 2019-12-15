@@ -24,18 +24,18 @@ const NavStyles = styled.ul`
     }
     &:before {
       content: '';
-      width: 2px;
-      background: ${props => props.theme.lightgrey};
+      width: 3px;
+      background: ${props => props.theme.beiche};
       height: 100%;
       left: 0;
       position: absolute;
-      transform: skew(-20deg);
+      /* transform: skew(-20deg); */
       top: 0;
       bottom: 0;
     }
     &:after {
-      height: 2px;
-      background: red;
+      height: 3px;
+      background: ${props => props.theme.salmon};
       content: '';
       width: 0;
       position: absolute;
@@ -57,7 +57,7 @@ const NavStyles = styled.ul`
     }
   }
   @media (max-width: 1300px) {
-    border-top: 1px solid ${props => props.theme.lightgrey};
+    border-top: 3px solid ${props => props.theme.beiche};
     width: 100%;
     justify-content: center;
     font-size: 1.5rem;

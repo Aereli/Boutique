@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
+import styled, { ThemeProvider, injectGlobal } from 'styled-components'
 import Header from '../components/Header'
 import Meta from '../components/Meta'
-import styled, { ThemeProvider, injectGlobal } from 'styled-components'
 
 const theme = {
 blue: '#a5cee4',
@@ -20,9 +20,36 @@ color: ${props => props.theme.black};
 
 const Inner = styled.div`
 max-width: ${props => props.theme.maxWidth};
-background: ${props => props.theme.blue};
 margin: 0 auto;
 padding: 2rem;
+`
+
+injectGlobal`
+@font-face{
+  font-family: 'Shadows Into Light';
+  src: url('/static/ShadowsIntoLight-Regular.woff2')
+  format('woff2');
+  letter-spacing: 2rem;
+}
+html{
+  box-sizing: border-box;
+  font-size: 10px; 
+} 
+*, *:before, *after{
+  box-sizing: inherit;
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  line-height: 2;
+  font-family: 'Shadows Into Light', cursive;
+  letter-spacing: 2px;
+  a{
+    text-decoration: none;
+    color: ${theme.black};
+  }
+}
 `
 
 class Page extends Component {
