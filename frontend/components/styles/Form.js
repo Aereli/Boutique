@@ -30,17 +30,17 @@ const Form = styled.form`
     width: 100%;
     padding: 0.5rem;
     font-size: 1rem;
-    border: 1px solid black;
+    border: 1px solid #fda692;
     &:focus {
       outline: 0;
-      border-color: ${props => props.theme.red};
+      border-color: ${props => props.theme.salmon};
     }
   }
   button,
   input[type='submit'] {
     width: auto;
-    background: red;
-    color: white;
+    background: ${props => props.theme.salmon};
+    color: #393939;
     border: 0;
     font-size: 2rem;
     font-weight: 600;
@@ -57,7 +57,7 @@ const Form = styled.form`
       height: 10px;
       content: '';
       display: block;
-      background-image: linear-gradient(to right, #ff3019 0%, #e2b04a 50%, #ff3019 100%);
+      background-image: linear-gradient(to right, #fda692 0%, #fdeada 50%, #fda692 100%);
     }
     &[aria-busy='true']::before {
       background-size: 50% auto;
